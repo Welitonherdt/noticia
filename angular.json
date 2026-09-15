@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "b40d53c2-99bf-4e3b-8207-a0e6ec5008af"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "vaguinha": {
+    "central-agora": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -49,9 +50,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -81,10 +80,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "vaguinha:build:production"
+              "buildTarget": "central-agora:build:production"
             },
             "development": {
-              "buildTarget": "vaguinha:build:development"
+              "buildTarget": "central-agora:build:development"
             }
           },
           "defaultConfiguration": "development"
