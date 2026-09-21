@@ -1,0 +1,133 @@
+.card-noticia {
+  display: grid;
+  grid-template-rows: 190px 1fr;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: 0.2s ease;
+}
+
+.card-noticia:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.14);
+}
+
+.card-noticia.exclusiva {
+  border-color: #f59e0b;
+}
+
+.imagem-noticia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+.topo-card,
+.metadados,
+.etiquetas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.categoria {
+  color: #0f766e;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.botao-favorito,
+.botao-ler {
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.botao-favorito {
+  padding: 8px 10px;
+  color: #334155;
+  background-color: #f1f5f9;
+}
+
+.botao-favorito:hover,
+.botao-favorito.favorita {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
+
+h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.metadados {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.etiquetas {
+  justify-content: flex-start;
+}
+
+.etiqueta {
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.destaque {
+  color: #7f1d1d;
+  background-color: #fecaca;
+}
+
+.exclusivo {
+  color: #78350f;
+  background-color: #fde68a;
+}
+
+.aberto {
+  color: #14532d;
+  background-color: #bbf7d0;
+}
+
+.botao-ler {
+  width: 100%;
+  margin-top: auto;
+  padding: 12px;
+  color: #fff;
+  background-color: #111827;
+}
+
+.botao-ler:hover:not(:disabled) {
+  background-color: #0f766e;
+}
+
+.botao-ler:disabled {
+  cursor: not-allowed;
+  color: #78350f;
+  background-color: #fef3c7;
+}

@@ -1,0 +1,54 @@
+<article class="card-noticia" [class.exclusiva]="noticia.exclusiva">
+  <img
+    class="imagem-noticia"
+    [src]="noticia.imagem"
+    [alt]="'Imagem da noticia: ' + noticia.titulo"
+  />
+
+  <div class="conteudo-card">
+    <div class="topo-card">
+      <span class="categoria">{{ noticia.categoria }}</span>
+
+      <button
+        class="botao-favorito"
+        [class.favorita]="favorita"
+        [title]="favorita ? 'Remover dos favoritos' : 'Adicionar aos favoritos'"
+        (click)="alterarFavorito()"
+      >
+        @if (favorita) {
+          Salvo
+        } @else {
+          Salvar
+        }
+      </button>
+    </div>
+
+    <h3>{{ noticia.titulo }}</h3>
+    <p>{{ noticia.resumo }}</p>
+
+    <div class="metadados">
+      <span>{{ noticia.autor }}</span>
+      <span>{{ noticia.tempoLeitura }} min de leitura</span>
+    </div>
+
+    <div class="etiquetas">
+      @if (noticia.destaque) {
+        <span class="etiqueta destaque">Destaque</span>
+      }
+
+      @if (noticia.exclusiva) {
+        <span class="etiqueta exclusivo">Exclusivo</span>
+      } @else {
+        <span class="etiqueta aberto">Acesso aberto</span>
+      }
+    </div>
+
+    <button class="botao-ler" [disabled]="noticia.exclusiva && !assinante" (click)="abrirNoticia()">
+      @if (noticia.exclusiva && !assinante) {
+        Conteudo exclusivo
+      } @else {
+        Ler noticia completa
+      }
+    </button>
+  </div>
+</article>
