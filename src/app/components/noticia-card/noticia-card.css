@@ -42,11 +42,8 @@
   flex-wrap: wrap;
 }
 
-.categoria {
-  color: #0f766e;
-  font-size: 13px;
-  font-weight: 800;
-  text-transform: uppercase;
+.topo-card {
+  justify-content: flex-end;
 }
 
 .botao-favorito,

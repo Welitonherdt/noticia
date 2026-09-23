@@ -25,22 +25,10 @@
   padding: 70px 0;
 }
 
-.editoria {
-  color: #0f766e;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.hero .editoria {
-  color: #fcd34d;
-}
-
 .hero h2,
 .destaque-principal h2,
 .cabecalho-secao h2 {
-  margin: 8px 0 12px;
+  margin: 0 0 12px;
   line-height: 1.12;
 }
 

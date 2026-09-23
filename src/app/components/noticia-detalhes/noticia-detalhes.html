@@ -1,7 +1,6 @@
 @if (noticia) {
   <article class="noticia-completa">
     <button class="botao-fechar" (click)="fecharNoticia()">Fechar noticia</button>
-    <span class="editoria">{{ noticia.categoria }}</span>
     <h2>{{ noticia.titulo }}</h2>
     <p class="dados-publicacao">
       Publicado por {{ noticia.autor }} em {{ noticia.dataPublicacao }}
@@ -11,7 +10,6 @@
   </article>
 } @else {
   <div class="sem-selecao">
-    <span class="editoria">Noticia completa</span>
     <h2>Selecione uma noticia para continuar a leitura</h2>
     <p>Use os cards acima para abrir a materia completa nesta area.</p>
   </div>

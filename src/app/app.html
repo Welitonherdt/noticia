@@ -3,7 +3,6 @@
 <main id="inicio" class="pagina">
   <section class="hero">
     <div class="conteudo-hero">
-      <span class="editoria">Noticias em destaque</span>
       <h2>{{ tituloPortal }}</h2>
       <p>
         Ola, {{ nomeUsuario }}. Acompanhe categorias, resumos, noticias completas, destaques e
@@ -34,7 +33,6 @@
   @if (noticiaDestaque) {
     <section id="destaque" class="secao destaque-principal">
       <div>
-        <span class="editoria">{{ noticiaDestaque.categoria }}</span>
         <h2>{{ noticiaDestaque.titulo }}</h2>
         <p>{{ noticiaDestaque.resumo }}</p>
         <button (click)="abrirNoticia(noticiaDestaque)">Ler destaque</button>
@@ -49,7 +47,6 @@
 
   <section id="categorias" class="secao categorias">
     <div class="cabecalho-secao">
-      <span class="editoria">Categorias</span>
       <h2>Escolha o assunto</h2>
     </div>
 
@@ -67,7 +64,6 @@
 
   <section id="noticias" class="secao">
     <div class="cabecalho-secao">
-      <span class="editoria">{{ categoriaSelecionada }}</span>
       <h2>Noticias publicadas</h2>
     </div>
 
